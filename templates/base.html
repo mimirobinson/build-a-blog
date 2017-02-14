@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    </head>
+    <body>
+        <div class="top-nav-wrapper">
+            <div class="top-container">
+                <ul class="top-nav">
+                    <li id="menu-item-001"><a href="/blog">HOME</a></li>
+                    <li id="menu-item-002"><a href="/newpost">ADD NEW</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content-wrapper">
+            <div class="container">
+                <header id="main-header">
+                    <h1>LaunchCode Legacies</h1>
+                </header>
+
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

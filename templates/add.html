@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>LC101 Blog</h1>
+
+<form method="post">
+    <label>
+        <div class="title">Title</div>
+        <input type="text" name="title" value="{{title}}">
+    </label>
+
+    <label>
+        <div class="body">Blog</div>
+        <textarea name="body">{{body}}</textarea>
+    </label>
+
+    <div class="error">{{error}}</div>
+    <input type="submit">
+</form>
+
+{% endblock %}

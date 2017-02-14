@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>LC101 Blog</h1>
+
+{% for post in posts %}
+<hr>
+<div class="post">
+    <div class="post-title"><a href='/blog/{{post.key().id()}}'>{{post.title}}</a></div>
+    <div class="post-body"> {{post.body}}</div>
+</div>
+{% endfor %}
+
+<p>
+{% if page > 1 %}
+<a href="/blog?page={{page-1}}">Previous</a>
+{% endif %}
+{% if more == "Y" %}
+<p><a href="/blog?page={{page + 1}}">Next</a>
+{% endif %}
+</p>
+{% endblock %}
